@@ -53,3 +53,28 @@
 // let arr = [2,4,7,0,5,9,-6];
 // let result = findSmallest(arr);
 // console.log(result);
+
+// //5.Write a function that returns the second largest number in an array.
+
+// function secondLargest(arr){
+//   let firstlargest = -Infinity;
+//   let secLargest = -Infinity;
+//   for(let i = 0;i<arr.length;i++){
+//     if(arr[i]>firstlargest){
+//         secLargest = firstlargest;
+//         firstlargest = arr[i];
+//     }
+//     else if( arr[i]>secLargest){
+//         secLargest = arr[i]
+//     }     
+//     }
+//     return secLargest;
+//   }
+// let arr = [23,44,55,21,56,57,78,43]
+// let result = secondLargest(arr)
+// console.log(result);
+// //This Problem has some corner cases
+// //1.what if your array is empty
+// //2.what id your array has negative number
+// //3.what if your array has duplicates
+// //4.what if your has infinity number

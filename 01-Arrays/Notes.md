@@ -199,6 +199,96 @@ let arr = [2, 5, 7, 3, 9, 4];
 let result = findSmallest(arr);
 console.log(result);
 ```
+# 5️⃣ Find Second Largest Element
+## 🔹Problem
+
+Write a function that returns the second largest number in an array.
+
+## 🔹Theory
+
+To find the second largest element:
+
+We maintain two variables:
+
+firstLargest
+
+secLargest
+
+Both are initialized to -Infinity.
+
+While traversing the array:
+
+If current element > firstLargest
+→ Update secLargest = firstLargest
+→ Update firstLargest = current element
+
+Else if current element > secLargest
+→ Update secLargest
+
+Why -Infinity?
+Because any number is greater than -Infinity, so it helps in comparison.
+
+## 🔹Logic
+
+Initialize:
+```js
+firstLargest = -Infinity  
+secLargest = -Infinity
+```
+
+Traverse the array:
+
+If element > firstLargest
+→ secLargest = firstLargest
+→ firstLargest = element
+
+Else if element > secLargest
+→ secLargest = element
+
+Return secLargest.
+
+## 🔹Time Complexity
+
+O(n)
+Because we traverse the array only once.
+
+## 🔹Code
+```js
+function secondLargest(arr) {
+  let firstLargest = -Infinity;
+  let secLargest = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > firstLargest) {
+      secLargest = firstLargest;
+      firstLargest = arr[i];
+    } 
+    else if (arr[i] > secLargest && arr[i] !== firstLargest) {
+      secLargest = arr[i];
+    }
+  }
+
+  return secLargest;
+}
+
+let arr = [23, 44, 55, 21, 56, 57, 78, 43];
+let result = secondLargest(arr);
+console.log(result);
+```
+ ## 🔹Corner Cases
+
+1️⃣ What if the array is empty?
+→ Return null or show error.
+
+2️⃣ What if array has negative numbers?
+→ Works correctly because we use -Infinity.
+
+3️⃣ What if array has duplicates?
+→ Make sure second largest is different from largest
+(Handled using arr[i] !== firstLargest).
+
+ 4️⃣ What if array contains Infinity?
+→  Logic still works because comparisons are valid.
 
 ------------------------------------------------------------------------
 
