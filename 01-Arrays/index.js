@@ -260,8 +260,7 @@
 // let result = countDigit(num);
 // console.log(result);
 
-
-//2.Palindrome Number
+// //2.Palindrome Number
 // let isPalindrome = function(n){
 //     if(n<0) return false;
 //     let nCopy = n
@@ -278,8 +277,30 @@
 //     return false
 //  }
 // }
-// let n = 1234;
+// let n = -121;
 // let res = isPalindrome(n)
+// console.log(res);
+
+// //3.Reverse Number
+
+// let reverse = function(x){
+// let xCopy = x;
+// x = Math.abs(x)
+//    let rev = 0;
+//    while(x>0){
+//       let last  = x%10;
+//       rev = (10*rev)+last;
+//       x = Math.floor(x/10)
+//    }
+//    if(xCopy<0){
+//       return -rev
+//    }
+//    else{
+//       return rev
+//    }
+// }
+// let x =-123;
+// let res = reverse(x);
 // console.log(res);
 
 
