@@ -197,7 +197,7 @@
     
 // }
  
-////8.
+// //8.
 // //  1
 // //  10
 // //  101
@@ -220,7 +220,7 @@
 //     console.log(row);   
 // }
 
-////9.
+// //9.
 //  //1
 //  //01
 //  //010
@@ -302,5 +302,21 @@
 // let x =-123;
 // let res = reverse(x);
 // console.log(res);
+
+// //4.Removes Duplicates from array(leetcode_26)
+
+// let removes = function(arr){
+//     let x = 0;
+//    for(let i = 0;i<arr.length;i++){
+//     if(arr[i]>arr[x]){
+//         x = x+1;
+//     arr[x]=arr[i];
+//     }
+//    }
+//    return x+1; 
+// }
+// let arr = [0,0,1,1,1,2,2,3,3,4];
+// let res = removes(arr);
+// console.log(arr);
 
 

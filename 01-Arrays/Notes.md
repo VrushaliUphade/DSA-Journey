@@ -292,4 +292,277 @@ console.log(result);
 
 ------------------------------------------------------------------------
 
+
+
+# ⭐ Pattern Problems (Loops Practice)
+
+## Pattern problems help improve:
+
+→ Nested loop understanding
+
+→ Logical thinking
+
+→ Row & column structure clarity
+
+
+# 1️⃣ Square Star Pattern
+## 🔹Problem
+
+Print a square pattern of stars.
+```
+****
+****
+****
+****
+```
+## 🔹Theory
+
+Outer loop → Controls rows
+
+Inner loop → Controls columns
+
+Both loops run n times
+
+## 🔹Logic
+
+Run outer loop from 0 → n
+
+For each row:
+
+Run inner loop from 0 → n
+
+Add "*" to row string
+
+Print row
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+# 2️⃣ Increasing Star Pattern
+## 🔹Problem
+```
+*
+**
+***
+****
+```
+## 🔹Theory
+
+Inner loop runs i + 1 times.
+
+## 🔹Logic
+
+Outer loop → rows
+
+Inner loop → runs from 0 → i
+
+Print "*"
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+# 3️⃣ Number Increasing Pattern
+## 🔹Problem
+```
+1
+12
+123
+1234
+12345
+```
+## 🔹Theory
+
+Print numbers from 1 to i+1 in each row.
+
+## 🔹Logic
+
+Outer loop → rows
+
+Inner loop → 0 → i
+
+Print (j + 1)
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+# 4️⃣ Repeating Number Pattern
+## 🔹Problem
+```
+1
+22
+333
+4444
+55555
+```
+## 🔹Theory
+
+Each row prints the same number (i + 1).
+
+## 🔹Logic
+
+Outer loop → rows
+
+Inner loop → 0 → i
+
+Print (i + 1)
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+
+# 5️⃣ Reverse Number Pattern
+## 🔹Problem
+```
+12345
+1234
+123
+12
+1
+```
+## 🔹Theory
+
+Inner loop decreases as row increases.
+
+## 🔹Logic
+
+Outer loop → 0 → n
+
+Inner loop → 0 → n - i
+
+Print (j + 1)
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+
+# 6️⃣ Reverse Star Pattern
+## 🔹Problem
+```
+*****
+****
+***
+**
+*
+```
+## 🔹Theory
+
+Print stars but decrease count every row.
+
+## 🔹Logic
+
+Outer loop → rows
+
+Inner loop → 0 → n - i
+
+Print "*"
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+# 7️⃣ Right-Aligned Star Pattern
+## 🔹Problem
+```
+----*
+---**
+--***
+-****
+*****
+```
+## 🔹Theory
+
+Two inner loops:
+
+First → print spaces (or -)
+
+Second → print stars
+
+## 🔹Logic
+
+First loop → n - (i + 1) times
+
+Second loop → i + 1 times
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+
+# 8️⃣ Alternating 1-0 Pattern
+## 🔹Problem
+```
+1
+10
+101
+1010
+10101
+```
+## 🔹Theory
+
+Use a toggle variable (Switch) that changes between 1 and 0.
+
+## 🔹Logic
+
+Initialize Switch = 1
+
+Print Switch
+
+Toggle:
+
+If 1 → make 0
+
+If 0 → make 1
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+# 9️⃣ Continuous Alternating Pattern
+## 🔹Problem
+```
+1
+01
+010
+1010
+10101
+```
+## 🔹Theory
+
+Switch variable continues across rows.
+
+## 🔹Logic
+
+Keep Switch outside outer loop
+
+Toggle after every print
+
+## 🔹Time Complexity
+
+O(n²)
+
+------------------------------------------------------------------------
+
+
+
 More Array problems coming soon 🚀
