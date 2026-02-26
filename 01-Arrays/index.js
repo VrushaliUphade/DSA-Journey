@@ -335,3 +335,22 @@
 // let val = 3;
 // let res = remove(nums,val);
 // console.log(nums);
+
+// // 5.Reverse String
+
+// let reverseString = function(s){
+// let len = s.length;
+// let halflen = Math.floor(len/2);
+// for(let i = 0;i<halflen;i++){
+//     let temp = s[i];
+//        s[i] = s[len-1-i]
+//        s[len-1-i] = temp;
+// }
+// return s;
+// }
+// s = ["h","e","l","l","o"]
+// let res = reverseString(s);
+// console.log(res);
+
+
+    
