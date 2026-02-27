@@ -563,6 +563,267 @@ O(n²)
 
 ------------------------------------------------------------------------
 
+# While Loop
 
+# 1️⃣ Count Digits in a Number
+## 🔹 Problem
+
+## Write a function that returns the number of digits in a given number.
+ 
+## 🔹 Theory
+
+To count digits:
+
+If number is 0, it has 1 digit
+
+Remove last digit using Math.floor(n / 10)
+
+Count how many times we divide until number becomes 0
+
+Use Math.abs() to handle negative numbers
+
+## 🔹 Logic
+
+If n == 0 → return 1
+
+Convert number to positive using Math.abs()
+
+Initialize count = 0
+
+While n > 0
+
+Divide n by 10
+
+Increment count
+
+Return count
+
+## 🔹 Time Complexity
+
+O(log₁₀ n)
+
+## 🔹 Code
+
+```
+function countDigit(n){
+  if(n == 0) return 1;
+  n = Math.abs(n);
+
+  let count = 0;
+  while(n > 0){
+    n = Math.floor(n / 10);
+    count++;
+  }
+  return count;
+}
+
+let num = -0;
+let result = countDigit(num);
+console.log(result);
+```
+
+# 2️⃣ Palindrome Number
+## 🔹 Problem
+
+### Check whether a given number is a palindrome.
+
+A palindrome number reads the same forward and backward.
+
+## 🔹 Theory
+
+Negative numbers are NOT palindrome.
+
+Reverse the number.
+
+Compare reversed number with original number.
+
+## 🔹 Logic
+
+If n < 0 → return false
+
+Store copy of number
+
+Reverse number using while loop
+
+Compare reversed value with original copy
+
+## 🔹 Time Complexity
+
+O(log₁₀ n)
+
+
+## 🔹 Code
+```
+let isPalindrome = function(n){
+  if(n < 0) return false;
+
+  let nCopy = n;
+  let rev = 0;
+
+  while(n > 0){
+    let rem = n % 10;
+    rev = (10 * rev) + rem;
+    n = Math.floor(n / 10);
+  }
+
+  return rev === nCopy;
+}
+
+let n = -121;
+let res = isPalindrome(n);
+console.log(res);
+```
+# 3️⃣ Reverse Number
+## 🔹 Problem
+
+### Reverse a given integer.
+
+## 🔹 Theory
+
+Extract last digit using % 10
+
+Build reversed number
+
+Handle negative numbers separately
+
+## 🔹 Logic
+
+Store original number
+
+Convert to positive using Math.abs()
+
+Reverse digits using loop
+
+If original number was negative → return negative reversed
+
+## 🔹 Time Complexity
+
+O(log₁₀ n)
+
+## 🔹 Code
+```
+let reverse = function(x){
+  let xCopy = x;
+  x = Math.abs(x);
+
+  let rev = 0;
+  while(x > 0){
+    let last = x % 10;
+    rev = (10 * rev) + last;
+    x = Math.floor(x / 10);
+  }
+
+  return xCopy < 0 ? -rev : rev;
+}
+
+let x = -123;
+let res = reverse(x);
+console.log(res);
+```
+
+# 4️⃣ Remove Duplicates from Sorted Array (LeetCode 26)
+## 🔹 Problem
+
+## Remove duplicates from a sorted array in-place and return the new length.
+
+## 🔹 Theory
+
+Since array is sorted, duplicates are next to each other.
+
+Use two pointers:
+
+x → slow pointer (unique elements)
+
+i → fast pointer (traversing)
+
+## 🔹 Logic
+
+Initialize x = 0
+
+Traverse array
+
+If current element > arr[x]
+
+Move pointer
+
+Replace element
+
+Return x + 1
+
+## 🔹 Time Complexity
+
+O(n)
+
+## 🔹 Code
+```
+let removes = function(arr){
+  let x = 0;
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > arr[x]){
+      x = x + 1;
+      arr[x] = arr[i];
+    }
+  }
+
+  return x + 1;
+}
+
+let arr = [0,0,1,1,1,2,2,3,3,4];
+let res = removes(arr);
+console.log(arr);
+```
+
+# 5️⃣ Remove Element (LeetCode 27)
+## 🔹 Problem
+
+Remove all occurrences of a given value in-place and return new length.
+
+## 🔹 Theory
+
+Use two pointers
+
+Overwrite unwanted elements
+
+No need to maintain order beyond new length
+
+## 🔹 Logic
+
+Initialize x = 0
+
+Traverse array
+
+If element != val
+
+Assign it to nums[x]
+
+Increment x
+
+Return x
+
+## 🔹 Time Complexity
+
+O(n)
+
+## 🔹 Code
+```
+let remove = function(nums, val){
+  let x = 0;
+
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i] != val){
+      nums[x] = nums[i];
+      x++;
+    }
+  }
+
+  return x;
+}
+
+let nums = [3,2,1,5,3,4,8,3];
+let val = 3;
+let res = remove(nums, val);
+console.log(nums);
+```
 
 More Array problems coming soon 🚀
