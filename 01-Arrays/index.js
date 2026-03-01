@@ -352,7 +352,7 @@
 // let res = reverseString(s);
 // console.log(res);
 
-// //6.Remove Zeros
+// //6. Move Zeros
 // let  removesZeros =function(arr){
 //  let x = 0;
 //  for(let i = 0;i<arr.length;i++){
@@ -370,3 +370,23 @@
 //   let res = removesZeros(arr);
 //   console.log(res);
     
+// // 7.max Cosecutive Ones
+// let maxCosecutiveOnes = function(nums){
+//     let currCount = 0;
+//     let maxCount = 0;
+//     for(let i = 0; i<nums.length;i++){
+//         if(nums[i]==1){
+//             currCount++;
+//         }
+//         else{
+//             maxCount = Math.max(currCount,maxCount);
+//             currCount = 0
+//         }
+//     }
+//     return Math.max(currCount,maxCount);
+// }
+
+// let nums = [1,0,1,1,0,1];
+// let res = maxCosecutiveOnes(nums);
+// console.log(res);
+
