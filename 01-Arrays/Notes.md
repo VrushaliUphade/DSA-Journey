@@ -826,4 +826,208 @@ let res = remove(nums, val);
 console.log(nums);
 ```
 
+# 5️⃣ Reverse String
+## 🔹 Problem
+
+Reverse a given character array in-place.
+
+Example:
+["h","e","l","l","o"] → ["o","l","l","e","h"]
+
+## 🔹 Theory
+
+Use Two Pointer Approach
+
+First pointer → start of array
+
+Second pointer → end of array
+
+Swap elements and move inward
+
+Stop when pointers meet
+
+This avoids creating a new array (in-place solution).
+
+## 🔹 Logic
+
+Find length of array
+
+Loop until length / 2
+
+Swap:
+
+s[i]
+
+s[len - 1 - i]
+
+Return array
+
+## 🔹 Time Complexity
+
+O(n)
+
+## 🔹 Space Complexity
+
+O(1) (In-place)
+
+## 🔹 Code
+```
+let reverseString = function(s){
+  let len = s.length;
+  let halflen = Math.floor(len / 2);
+
+  for(let i = 0; i < halflen; i++){
+    let temp = s[i];
+    s[i] = s[len - 1 - i];
+    s[len - 1 - i] = temp;
+  }
+
+  return s;
+}
+
+let s = ["h","e","l","l","o"];
+let res = reverseString(s);
+console.log(res);
+```
+
+# 6️⃣ Move Zeros
+## 🔹 Problem
+
+Move all zeros to the end of the array while maintaining the order of non-zero elements.
+
+Example:
+[0,2,3,0,1,9] → [2,3,1,9,0,0]
+
+## 🔹 Theory
+
+Use two-pointer technique.
+
+First pointer x tracks position to place non-zero elements.
+
+First pass → move all non-zero elements forward.
+
+Second pass → fill remaining positions with 0.
+
+## 🔹 Logic
+
+Initialize x = 0
+
+Traverse array
+
+If element ≠ 0
+
+Assign it to arr[x]
+
+Increment x
+
+After loop
+
+Fill remaining positions with 0
+
+## 🔹 Time Complexity
+
+O(n)
+
+## 🔹 Space Complexity
+
+O(1)
+
+## 🔹 Code
+```
+let removesZeros = function(arr){
+  let x = 0;
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== 0){
+      arr[x] = arr[i];
+      x++;
+    }
+  }
+
+  for(let i = x; i < arr.length; i++){
+    arr[i] = 0;
+  }
+
+  return arr;
+}
+
+let arr = [0,2,3,0,1,9];
+let res = removesZeros(arr);
+console.log(res);
+```
+
+# 7️⃣ Max Consecutive Ones
+## 🔹 Problem
+
+Find the maximum number of consecutive 1s in a binary array.
+
+Example:
+[1,0,1,1,0,1] → 2
+
+## 🔹 Theory
+
+Maintain two variables:
+
+currCount → counts current streak of 1s
+
+maxCount → stores maximum streak
+
+If element is 1 → increment currCount
+
+If element is 0
+
+Update maxCount
+
+Reset currCount
+
+At the end, return the maximum of both.
+
+## 🔹 Logic
+
+Initialize currCount = 0
+
+Initialize maxCount = 0
+
+Traverse array:
+
+If 1 → increment currCount
+
+Else:
+
+Update maxCount
+
+Reset currCount
+
+Return Math.max(currCount, maxCount)
+
+## 🔹 Time Complexity
+
+O(n)
+
+## 🔹 Space Complexity
+
+O(1)
+
+## 🔹 Code
+```
+let maxCosecutiveOnes = function(nums){
+  let currCount = 0;
+  let maxCount = 0;
+
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i] == 1){
+      currCount++;
+    } else {
+      maxCount = Math.max(currCount, maxCount);
+      currCount = 0;
+    }
+  }
+
+  return Math.max(currCount, maxCount);
+}
+
+let nums = [1,0,1,1,0,1];
+let res = maxCosecutiveOnes(nums);
+console.log(res);
+```
 More Array problems coming soon 🚀
