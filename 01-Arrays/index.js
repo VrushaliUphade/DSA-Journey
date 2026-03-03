@@ -390,3 +390,20 @@
 // let res = maxCosecutiveOnes(nums);
 // console.log(res);
 
+
+// //8. Missing Number - 268 Leetcode
+// let missingNum = function(nums){
+//     let n = nums.length;
+//     let totalSum  = n*(n+1)/2;
+
+//     let parialSum = 0;
+//     for(let i = 0;i<nums.length;i++){
+//         parialSum = parialSum + nums[i];
+
+//     }
+//     return totalSum - parialSum;
+// }
+// let nums = [1,4,0,3,5];
+// let res = missingNum(nums);
+// console.log(res);
+
