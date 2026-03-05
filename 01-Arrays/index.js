@@ -407,3 +407,14 @@
 // let res = missingNum(nums);
 // console.log(res);
 
+// //Linear Search
+// function LinearSearch(arr,target){
+//     for(let i = 0;i<arr.length;i++){
+//         if(arr[i]==target)
+//             return i;
+//     }
+// }
+// let arr = [2,4,5,6,7];
+// let target = 6;
+// let res = LinearSearch(arr,target);
+// console.log(res);
