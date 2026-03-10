@@ -419,28 +419,29 @@
 // let res = LinearSearch(arr,target);
 // console.log(res);
 
-// //Binary Search
-// let binarySearch = function(nums,target){
-// let left = 0;
-// let right = nums.length-1;
+//Binary Search question
+let binarySearch = function(nums,target){
+let left = 0;
+let right = nums.length-1;
 
-// while(right>=left){
-//     let middle = Math.floor((left+right)/2);
+while(right>=left){
+    let middle = Math.floor((left+right)/2);
 
-//     if(target == nums[middle]){
-//         return middle;
-//     }
-//      else if(target<nums[middle]){
-//       right = middle-1;
-//     }
-//     else{
-//        left = middle+1;
-//     }
-// }
-// return -1;
-// };
+    if(target == nums[middle]){
+        return middle;
+    }
+     else if(target<nums[middle]){
+      right = middle-1;
+    }
+    else{
+       left = middle+1;
+    }
+}
+return -1;
+};
 
-// let nums = [2,4,7,9,10,15];
-// let target = 15;
-// let res = binarySearch(nums,target);
-// console.log(res);
+let nums = [2,4,7,9,10,15];
+let target = 15;
+let res = binarySearch(nums,target);
+console.log(res);
+
